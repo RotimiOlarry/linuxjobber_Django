@@ -83,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'scrumy_db',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'changed',
         'HOST':'localhost',
         'PORT': '8889',
     }
