@@ -81,12 +81,8 @@ WSGI_APPLICATION = 'myscrumy.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'scrumy_db',
-        'USER': 'scrumy',
-        'PASSWORD': 'scrumy',
-        'HOST':'localhost',
-        'PORT': '8889',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
