@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost',
+    '3.21.166.185',
     '18.191.2.160',
     '0.0.0.0',
     '127.0.0.1',
@@ -82,8 +83,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'scrumy_db',
-        'USER': 'root',
-        'PASSWORD': 'changed',
+        'USER': 'scrumy',
+        'PASSWORD': 'scrumy',
         'HOST':'localhost',
         'PORT': '8889',
     }
