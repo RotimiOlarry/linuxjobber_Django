@@ -1,10 +1,6 @@
 MANIFEST.in
 README.rst
 setup.py
-django_timiolarryscrumy.egg-info/PKG-INFO
-django_timiolarryscrumy.egg-info/SOURCES.txt
-django_timiolarryscrumy.egg-info/dependency_links.txt
-django_timiolarryscrumy.egg-info/top_level.txt
 timiolarryscrumy/__init__.py
 timiolarryscrumy/admin.py
 timiolarryscrumy/apps.py
@@ -12,4 +8,8 @@ timiolarryscrumy/models.py
 timiolarryscrumy/tests.py
 timiolarryscrumy/urls.py
 timiolarryscrumy/views.py
+timiolarryscrumy.egg-info/PKG-INFO
+timiolarryscrumy.egg-info/SOURCES.txt
+timiolarryscrumy.egg-info/dependency_links.txt
+timiolarryscrumy.egg-info/top_level.txt
 timiolarryscrumy/migrations/__init__.py
