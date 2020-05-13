@@ -21,8 +21,8 @@ Quick Start
 
 3. Run 'python manage.py migrate' to create models.
 
-4. Start the development server and visit http:/127.0.0.1:8000/admin/ to 	create 
-	a a todo (You'll need the Admin app enabled).
+4. Start the development server and visit http:/127.0.0.1:8000/admin/ to create 
+	a todo (You'll need the Admin app enabled).
 
 5. Visit http:/127.0.0.1:8000/timiolarryscrumy/ to seee the to-do tasks 
 
