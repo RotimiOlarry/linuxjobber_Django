@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost',
+    'timiolarryscrumy',
     '3.21.166.185',
     '18.191.2.160',
     '0.0.0.0',
