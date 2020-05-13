@@ -1,0 +1,6 @@
+include LICENSE
+include README.rst
+recursive-include timiolarryscrumy/static *
+recursive-include timiolarryscrumy/templates *
+
+
