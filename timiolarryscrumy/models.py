@@ -10,7 +10,7 @@ class GoalStatus(models.Model):
         return self.status_name
 
 
-class ScrumyGoal(models.Model):
+class ScrumyGoals(models.Model):
     goal_name =models.CharField(max_length=50, default='')
     user = models.ForeignKey(User, related_name = 'goal_created',on_delete=models.PROTECT)
     goal_name =models.CharField(max_length=50, default='')
@@ -24,7 +24,7 @@ class ScrumyGoal(models.Model):
         return self.goal_name
 
 class ScrumyHistory(models.Model):
-    goal = models.ForeignKey(ScrumyGoal,on_delete=models.PROTECT)
+    goal = models.ForeignKey(ScrumyGoals,on_delete=models.PROTECT)
     moved_by = models.CharField(max_length=50,default='')
     created_by = models.CharField(max_length=50,default='')
     moved_from = models.CharField(max_length=50,default='')
