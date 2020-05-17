@@ -7,6 +7,6 @@ urlpatterns = [
     url(r'', views.index, name = 'index'),
     #url(r'^/move_goal/(?P<poll_id>\d+)/$', views.move_goal, name = "move_goal"),
     #r'^(?P<pk>\d+)/$'
-    url(r'^/move_goal/(?P<pk>\d+)/$', views.move_goal, name = "move_goal"),
+    url(r'^move_goal/(?P<pk>\d+)/$', views.move_goal, name = "move_goal"),
     #r'^move_goal/(\d+)/$'
 ]
