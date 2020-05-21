@@ -34,7 +34,7 @@ def add_goal(request):
             goal_id = number,
             created_by = 'Louis',
             moved_by = 'Louis',
-            owner = 'Louis',
+    s        owner = 'Louis',
             user = User.objects.get(username = 'Louis Oma'),
             goal_status = GoalStatus.objects.get(status_name = 'Weekly Goal'))
         sample_dict[number] = number
