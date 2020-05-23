@@ -44,10 +44,13 @@ def home(request):
     latest = ScrumyGoals.objects.filter(goal_name='Keep Learning Django')
     view = ',' .join([t.goal_name for t in latest])
     #template = loader.get_template('timiolarryscrumy/home.html')
-    dictionary = {'goal_name':ScrumyGoals.goal_name, 'goal_id':ScrumyGoals.goal_id ,
-                'user':ScrumyGoals.get(goal_name='Learn Django')}
+    dic = ({'goal_name' : 'Learn Django',
+            'goal_id' : 2,
+            'user' : User.objects.get(username = 'Louis')})
     
-    return render(request, 'usernamescrumy/home.html', dictionary)
+    dictionary = {'dict1' : dic}
+    
+    return render(request, 'timiolarryscrumy/home.html', dictionary)
 
 
     
