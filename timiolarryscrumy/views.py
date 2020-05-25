@@ -26,9 +26,9 @@ def move_goal(request, goal_id):
     return HttpResponse(resp)
 
 def add_goal(request):
-    sample_dict = {}
+    goal_dict = {}
     number = random.randint(1000, 9999)
-    if number not in sample_dict:
+    if number not in goal_dict:
         add = ScrumyGoals.objects.create(
             goal_name = "Keep Learning Django", 
             goal_id = number,
@@ -37,20 +37,16 @@ def add_goal(request):
             owner = 'Louis',
             user = User.objects.get(username = 'Louis Oma'),
             goal_status = GoalStatus.objects.get(status_name = 'Weekly Goal'))
-        sample_dict[number] = number
+        goal_dict[number] = number
     return HttpResponse(add)
 
 def home(request):
     latest = ScrumyGoals.objects.filter(goal_name='Keep Learning Django')
     view = ',' .join([t.goal_name for t in latest])
-    #template = loader.get_template('timiolarryscrumy/home.html')
     dic = ({'goal_name' : 'Learn Django',
             'goal_id' : 2,
-            'user' : User.objects.get(username = 'Louis')})
+            'user' : User.objects.get(username = 'LouisOma')})
     
     dictionary = {'dict1' : dic}
     
     return render(request, 'timiolarryscrumy/home.html', dictionary)
-
-
-    
