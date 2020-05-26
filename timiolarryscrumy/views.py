@@ -41,8 +41,7 @@ def add_goal(request):
     return HttpResponse(add)
 
 def home(request):
-    """latest = ScrumyGoals.objects.filter(goal_name='Keep Learning Django')
-    view = ',' .join([t.goal_name for t in latest])"""
+    
     goal = ScrumyGoals.objects.get(goal_name = 'Learn Django')
     dictionary = {
                 'goal_name': goal.goal_name, 
