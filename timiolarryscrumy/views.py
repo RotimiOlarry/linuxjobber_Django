@@ -49,5 +49,4 @@ def home(request):
     
     dictionary = {'dict1' : dic}
     
-    #return render(request, 'timiolarryscrumy/home.html') dicttionary
-    return HttpResponse (view)
+    return render(request, 'timiolarryscrumy/home.html',dictionary)
