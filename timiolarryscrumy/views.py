@@ -45,7 +45,7 @@ def home(request):
     view = ',' .join([t.goal_name for t in latest])
     dic = ({'goal_name' : 'Learn Django',
             'goal_id' : 2,
-            'user' : User.objects.get(username = 'LouisOma')})
+            'user' : User.objects.filter(username = 'LouisOma')})
     
     dictionary = {'dict1' : dic}
     
