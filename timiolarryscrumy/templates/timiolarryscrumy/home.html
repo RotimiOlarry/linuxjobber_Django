@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
-<table style="width:100%%">
+ <style>
+ 
+ table,td,th {
+            padding: 10px;
+            border: 2px solid #1c87c9;
+            border-radius: 5px;
+            background-color: #e5e5e5;
+            text-align: center;
+      }
+    </style>
+<table style="width:80%%">
 <h2>Scrumy Goals Table</h2>
 <tr>
     <th>User</th>
@@ -10,7 +20,7 @@
     <th>Done Gaols</th>
 </tr>
 <tr>
-    <td>{{ dict1.user }}</td>
+    <td>{{ dict1.user}}</td>
     <td> {{ dict1.goal_name }} ,{{dict1.goal_id }}</td>
     <td></td>
     <td ></td>
