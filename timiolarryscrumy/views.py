@@ -35,8 +35,8 @@ def add_goal(request):
             created_by = 'Louis',
             moved_by = 'Louis',
             owner = 'Louis',
-            user = User.objects.get(username = 'LouisOma'),
-            goal_status = GoalStatus.objects.get(status_name = 'Weekly Goal'))
+            user = User.objects.filter(username = 'LouisOma'),
+            goal_status = GoalStatus.objects.filter(status_name = 'Weekly Goal'))
         goal_dict[number] = number
     return HttpResponse(add)
 
