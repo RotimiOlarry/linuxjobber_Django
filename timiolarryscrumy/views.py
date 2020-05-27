@@ -16,7 +16,7 @@ def move_goal(request, goal_id):
     run = {'dict1' : dic }
 
     try:
-        resp = ScrumyGoals.objects.get(pk = 1)
+        resp = ScrumyGoals.objects.get(goal_id=goal_id)
 
     except Exception as e:
         return render(request, 'timiolarryscrumy/exception.html' ,run )
