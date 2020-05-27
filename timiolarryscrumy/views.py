@@ -12,18 +12,18 @@ def index(request):
     return HttpResponse(response)
 
 def move_goal(request, goal_id):
-    dic = ({"error":"This goal id dooesn't exist"})
-    run = {'dict1' : dic }
+    #dic = ({"error":"This goal id dooesn't exist"})
+    #run = {'dict1' : dic }
 
     try:
         resp = ScrumyGoals.objects.get(goal_id=goal_id)
 
     except Exception as e:
-        return render(request, 'timiolarryscrumy/exception.html' ,run )
+        return render(request, 'timiolarryscrumy/exception.html' ,{'error':'A record with that goal id does not exist'})
 
     else:
         return HttpResponse(resp.goal_name)
-    return HttpResponse(resp)
+    #return HttpResponse(resp)
 
 def add_goal(request):
     goal_dict = {}
