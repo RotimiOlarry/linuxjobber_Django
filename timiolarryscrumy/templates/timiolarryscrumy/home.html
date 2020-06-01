@@ -10,7 +10,9 @@
             text-align: center;
       }
     </style>
-<table style="width:80%%">
+
+    
+<table style="width:80%%", align :center>
     <h2>Scrumy Goals Table</h2>
         <tr>
             <th>User</th>
@@ -19,13 +21,47 @@
             <th>Verify Goals</th>
             <th>Done Goals</th>
         </tr>
-        <tr>
-            <td>{{ user}}</td>
-            <td> {{ goal_name }}
-        </tr>
-        <tr>   
-            <td></td>
-            <td>{{ goal_id }}</td>
-        </tr>    
+        
+            {% for user in user %}
+            <tr>
+                <td>{{user.username}}</td>
+
+                <td>
+                    {% for i in user.created.all %}
+                        {% if i.goal_status.status_name == 'Weekly Goal'%}
+                        {{i.goal_name}} || {{i.goal_id}}<br>
+                        {% endif %}
+                     {% endfor %}
+                </td>
+            
+            
+
+                <td>
+                    {% for i in user.created.all %}
+                        {% if i.goal_status.status_name == 'Daily Goal'%}
+                        {{i.goal_name}} || {{i.goal_id}}<br>
+                        {% endif %}
+                    {% endfor %}
+                </td>
+            
+                <td>
+                    {% for i in user.created.all %}
+                        {% if i.goal_status.status_name == 'Verify Goal'%}
+                        {{i.goal_name}} || {{i.goal_id}}<br>
+                        {% endif %}
+                    {% endfor %}
+                </td>
+            
+                <td>
+                    {% for i in user.created.all %}
+                        {% if i.goal_status.status_name == 'Done Goal'%}
+                        {{i.goal_name}} || {{i.goal_id}}<br>
+                        {% endif %}
+                    {% endfor %}
+                </td>
+            
+            {% endfor %}
+            </tr>
+            
 </table>
 </html>
